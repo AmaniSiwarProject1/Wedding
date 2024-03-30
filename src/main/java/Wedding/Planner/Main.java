@@ -284,68 +284,61 @@ public class Main {
     private static void showMenuForUser() {
     	EventManagment eventManager1 = new EventManagment();
 
-        boolean running = true;
+    	boolean running = true; // Variable to control the loop
 
-        while (running) {
-        	logger.info("------------------------------------------------");
-        	logger.info("1. View Profile");
-        	logger.info("2. Edit Profile");
-        	logger.info("3. Add Event");     
-        	logger.info("4. Delete Event");  
-        	logger.info("5. Update Event ");
-        	logger.info("6. Add a venue based on your budget");
-        	logger.info("7. Calender");
-        	logger.info("8. Add Photo or Vedio: ");
-        	logger.info("9. Log out");
+    	while (running) {
+    	    logger.info("------------------------------------------------");
+    	    logger.info("1. View Profile");
+    	    logger.info("2. Edit Profile");
+    	    logger.info("3. Add Event");
+    	    logger.info("4. Delete Event");
+    	    logger.info("5. Update Event");
+    	    logger.info("6. Add a venue based on your budget");
+    	    logger.info("7. Calender");
+    	    logger.info("8. Add Photo or Video:");
+    	    logger.info("9. Log out");
+    	    logger.info("------------------------------------------------");
+    	    Scanner scanner = new Scanner(System.in);
+    	    int num = scanner.nextInt(); // corrected variable name
+    	    scanner.nextLine();
 
-        	logger.info("------------------------------------------------");
-            Scanner scanner = new Scanner(System.in);
-            int num = input2.nextInt();
-            input2.nextLine(); 
-            
-            switch (num) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                	 eventManager1.addEvent();
-                     break;
-               case 4:
-            	   logger.info("Enter the date of the event you want to delete (yyyy-MM-dd): ");
-                   String eventDate = scanner.nextLine();
-                   logger.info("Enter the time of the event you want to delete (hh:mm a): ");
-                   String eventTime = scanner.nextLine();
-                   eventManager1.deleteEvent(eventDate, eventTime);
-                   break;
-                      
-                case 5:
-                	eventManager1.updateEvent(newEventsList);
-
-                    break;
-
-                case 6:
-                	 eventManager1.Venueadd();
-
-                    break;
-                case 7:
-                	eventManager.calander2();
-                	break;
-                case 8:
-                	 eventManager.Photo();
-                     break;
-                case 9:
-                	logger.info("Thanks for visiting the program.");
-                    System.exit(0);
-                    break;
-
-                default:
-                	logger.info("Invalid input. Please choose a number between 1 and 7.");
-                    break;
-            }
-        }
+    	    switch (num) {
+    	        case 1:
+    	            break;
+    	        case 2:
+    	            break;
+    	        case 3:
+    	            eventManager1.addEvent();
+    	            break;
+    	        case 4:
+    	            logger.info("Enter the date of the event you want to delete (yyyy-MM-dd): ");
+    	            String eventDate = scanner.nextLine();
+    	            logger.info("Enter the time of the event you want to delete (hh:mm a): ");
+    	            String eventTime = scanner.nextLine();
+    	            eventManager1.deleteEvent(eventDate, eventTime);
+    	            break;
+    	        case 5:
+    	            eventManager1.updateEvent(newEventsList);
+    	            break;
+    	        case 6:
+    	            eventManager1.Venueadd();
+    	            break;
+    	        case 7:
+    	            eventManager.calander2();
+    	            break;
+    	        case 8:
+    	            eventManager.Photo();
+    	            break;
+    	        case 9:
+    	            logger.info("Thanks for visiting the program.");
+    	            running = false; // Set the variable to false to exit the loop
+    	            break;
+    	        default:
+    	            logger.info("Invalid input. Please choose a number between 1 and 7.");
+    	            break;
+    	    }
+    	}
     }
-
     public static String login(String email, String password) {
         for (Users user : UsersList) {
             if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
