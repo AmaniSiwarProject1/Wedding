@@ -43,7 +43,7 @@ public class Venue {
     }
     
     public void setAvailablehour(String availablehour) {
-        this.hour = hour;
+        this.availablehour =availablehour;
     }
     @Override
     public String toString() {
