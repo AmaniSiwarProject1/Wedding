@@ -7,7 +7,7 @@ import java.util.InputMismatchException;
 
 import java.util.List;
 
-import Wedding.Planner.EventManagement.VenueEditor;
+import Wedding.Planner.EventManagment.VenueEditor;
 
 public class Main {
     static List<AddEvent> newEventsList = new ArrayList<>();
@@ -20,8 +20,8 @@ public class Main {
     public static ArrayList<Admin> AdminList = new ArrayList<>();
     public static ArrayList<ServiceProvider> ServiceProviderList = new ArrayList<>();
     static Scanner input2 = new Scanner(System.in);
-    public static EventManagement eventManager = new EventManagement();
-    private static final Logger logger = Logger.getLogger(EventManagement.class.getName());
+    public static EventManagment eventManager = new EventManagment();
+    private static final Logger logger = Logger.getLogger(EventManagment.class.getName());
 
     public static void setUserType(String type) {
         userType = type;
@@ -86,7 +86,7 @@ public class Main {
     }
 
     private static void showMenuForSp() {
-    	EventManagement eventManager1 = new EventManagement();
+    	EventManagment eventManager1 = new EventManagment();
     	VenueEditor venueEditor = eventManager.new VenueEditor();
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
@@ -181,7 +181,7 @@ public class Main {
     
 
  private static void showMenuForAd() {
-	 EventManagement eventManager1 = new EventManagement();
+	 EventManagment eventManager1 = new EventManagment();
 	VenueEditor venueEditor = eventManager.new VenueEditor();
     Scanner scanner = new Scanner(System.in);
     boolean running = true;
@@ -282,7 +282,7 @@ public class Main {
 }
 
     private static void showMenuForUser() {
-    	EventManagement eventManager1 = new EventManagement();
+    	EventManagment eventManager1 = new EventManagment();
 
         boolean running = true;
 
