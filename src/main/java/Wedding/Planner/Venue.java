@@ -1,6 +1,5 @@
 package Wedding.Planner;
 public class Venue {
-    private String id;
     private String name;
     private double price;
     private String availableDate;
