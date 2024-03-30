@@ -27,7 +27,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 
-public class EventManagement {
+public class EventManagment {
     private String errorMessage;
     private Map<String, Integer> venueCapacities; 
 
@@ -35,7 +35,7 @@ public class EventManagement {
     private static Scanner input = new Scanner(System.in);
     private static final Logger logger = Logger.getLogger(EventHandler.class.getName());
 
-    public EventManagement() {
+    public EventManagment() {
         events = new ArrayList<>();
         venueCapacities = new HashMap<>();
         initializeVenueCapacities();
