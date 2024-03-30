@@ -550,9 +550,7 @@ public void  calander2() {
 
 
 }
-public boolean hasEvent(String event) {
-    return events.contains(event);
-}
+
 
 public void  calanderSuperProvider() {
     WeddingPlanner planner = new WeddingPlanner();
