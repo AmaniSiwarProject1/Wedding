@@ -1,5 +1,4 @@
 package Wedding.Planner;
-import java.util.Scanner;
 
 
 public class AddVenue {
