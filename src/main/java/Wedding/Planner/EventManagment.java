@@ -1,6 +1,6 @@
 package Wedding.Planner;
 import java.util.logging.Logger;
-import Wedding.Planner.EventManagement;
+
 import io.cucumber.plugin.event.EventHandler;
 
 import java.time.LocalDateTime;
@@ -27,15 +27,15 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 
-public class EventManagment {
+public class EventManagement {
     private String errorMessage;
     private Map<String, Integer> venueCapacities; 
 
     private List<AddEvent> events;
     private static Scanner input = new Scanner(System.in);
-private static final Logger logger = Logger.getLogger(EventManagement.class.getName());
+    private static final Logger logger = Logger.getLogger(EventHandler.class.getName());
 
-    public EventManagment() {
+    public EventManagement() {
         events = new ArrayList<>();
         venueCapacities = new HashMap<>();
         initializeVenueCapacities();
@@ -550,7 +550,6 @@ public void  calander2() {
 
 
 }
-
 
 public void  calanderSuperProvider() {
     WeddingPlanner planner = new WeddingPlanner();
