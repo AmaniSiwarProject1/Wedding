@@ -372,7 +372,7 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
         	logger.info("Matching venues:");
             for (int i = 0; i < matchingVenues.size(); i++) {
                 Venue venue = matchingVenues.get(i);
-                logger.info((i + 1) + ". " + venue.getName() + " - Price: $" + venue.getPrice());
+                logger.info(String.format("Matching venues: %s; Price: $%.2f", venue.getName(), venue.getPrice()));
             }
 
             logger.info("Choose a venue (enter the number): ");
