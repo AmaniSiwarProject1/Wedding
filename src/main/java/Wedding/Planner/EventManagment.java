@@ -28,7 +28,7 @@ public class EventManagment {
 
     private List<AddEvent> events;
     private static Scanner input = new Scanner(System.in);
-    private static final Logger logger = Logger.getLogger(EventHandler.class.getName());
+private static final Logger logger = Logger.getLogger(EventManagement.class.getName());
 
     public EventManagment() {
         events = new ArrayList<>();
