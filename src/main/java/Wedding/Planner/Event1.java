@@ -25,9 +25,9 @@ public class Event1 {
 	    }
 
 	    public void displayEventDetails() {
-	        System.out.println("Event: " + name + " on " + date);
+	        logger.info("Event: " + name + " on " + date);
 	        for (Task task : tasks) {
-	            System.out.println("   " + task);
+	            logger.info("   " + task);
 	        }
 	    }
 	    
