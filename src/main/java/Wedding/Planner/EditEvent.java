@@ -86,14 +86,14 @@ public class EditEvent {
     }
 
     public void displayEventDetails() {
-        System.out.println("Event Details:");
-        System.out.println("Bride Name: " + brideName);
-        System.out.println("Groom Name: " + groomName);
-        System.out.println("Date: " + date);
-        System.out.println("Time: " + time);
-        System.out.println("Number of Guests: " + numberOfGuests);
-        System.out.println("Venue: " + venue);
-        System.out.println("Location: " + location);
-        System.out.println("Phone: " + phone);
+       logger.info("Event Details:");
+       logger.info("Bride Name: " + brideName);
+     logger.info("Groom Name: " + groomName);
+      logger.info("Date: " + date);
+      logger.info("Time: " + time);
+      logger.info("Number of Guests: " + numberOfGuests);
+       logger.info("Venue: " + venue);
+      logger.info("Location: " + location);
+     logger.info("Phone: " + phone);
     }
 }
