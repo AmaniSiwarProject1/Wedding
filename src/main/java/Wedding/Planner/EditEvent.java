@@ -89,8 +89,8 @@ public class EditEvent {
     }
 
     public void displayEventDetails() {
-       logger.info("Event Details:");
-       logger.info("Bride Name: " + brideName);
+      logger.info(String.format("Bride Name: %s", brideName));
+logger.info(String.format("Groom Name: %s", groomName));
      logger.info("Groom Name: " + groomName);
       logger.info("Date: " + date);
       logger.info("Time: " + time);
