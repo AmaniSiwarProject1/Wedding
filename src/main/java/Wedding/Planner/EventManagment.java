@@ -1,7 +1,6 @@
 package Wedding.Planner;
 import java.util.logging.Logger;
 
-import io.cucumber.plugin.event.EventHandler;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
