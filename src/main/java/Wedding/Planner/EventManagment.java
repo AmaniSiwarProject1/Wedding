@@ -14,6 +14,7 @@ import java.util.Timer;
 import java.util.TimerTask;
  
 import java.time.LocalTime;
+import java.util.logging.Logger;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -90,9 +91,20 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
             logger.info("List of Events:");
             for (int i = 0; i < events.size(); i++) {
                 AddEvent event = events.get(i);
-               logger.info((i + 1) + ". " + event.getBrideName() + " and " + event.getGroomName() +
-                        " - Date: " + event.getDate() + " - Time: " + event.getTime() + " - Number of Guests: " + event.getNumberOfGuests() +
-                        " - Venue: " + event.getVenue() + " - Location: " + event.getLocation() + " - Phone: " + event.getPhone());
+               logger.log(Level.INFO, 
+    "{0}. {1} and {2} - Date: {3} - Time: {4} - Number of Guests: {5} - Venue: {6} - Location: {7} - Phone: {8}", 
+    new Object[]{
+        i + 1, 
+        event.getBrideName(), 
+        event.getGroomName(), 
+        event.getDate(), 
+        event.getTime(), 
+        event.getNumberOfGuests(), 
+        event.getVenue(), 
+        event.getLocation(), 
+        event.getPhone()
+    });
+
             }
         }
     }
