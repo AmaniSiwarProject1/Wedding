@@ -42,9 +42,10 @@ public class Venue {
         this.availableDate = availableDate;
     }
     
-    public void setAvailablehour(String availablehour) {
-        this.availablehour =availablehour;
-    }
+    public void setAvailablehour(String hour) {
+    this.hour = hour;
+}
+
     @Override
     public String toString() {
         return "Venue{" +
