@@ -1,15 +1,18 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import java.util.logging.Logger;
 
-import Wedding.Planner.EventManagment;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import Wedding.Planner.EventManagment;
+import Wedding.Planner.Main;
 
 public class DeleteEvent {
 
     private EventManagment eventManagment;
+    private static final Logger logger = Logger.getLogger(DeleteEvent.class.getName());
 
     @Given("The user entered information about the event")
     public void theUserEnteredInformationAboutTheEvent() {
@@ -65,7 +68,7 @@ assertTrue(true);    }
         if (eventExists) {
             assertTrue(true);
        } else {
-            System.out.println("There is no event to delete.");
+    	   logger.info("There is no event to delete.");
         }
     }
     @Then("The system prompts the user to confirm deletion and The user cancels the deletion and The event remains in the events list")
