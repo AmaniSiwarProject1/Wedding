@@ -14,9 +14,9 @@ import java.util.Timer;
 import java.util.TimerTask;
  
 import java.time.LocalTime;
-import java.util.logging.Logger;
 
 import java.io.File;
+import java.lang.System.Logger.Level;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -91,28 +91,19 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
             logger.info("List of Events:");
             for (int i = 0; i < events.size(); i++) {
                 AddEvent event = events.get(i);
-               logger.log(Level.INFO, 
-    "{0}. {1} and {2} - Date: {3} - Time: {4} - Number of Guests: {5} - Venue: {6} - Location: {7} - Phone: {8}", 
-    new Object[]{
-        i + 1, 
-        event.getBrideName(), 
-        event.getGroomName(), 
-        event.getDate(), 
-        event.getTime(), 
-        event.getNumberOfGuests(), 
-        event.getVenue(), 
-        event.getLocation(), 
-        event.getPhone()
-    });
+                logger.info((i + 1) + ". " + event.getBrideName() + " and " + event.getGroomName() +
+                        " - Date: " + event.getDate() + " - Time: " + event.getTime() + " - Number of Guests: " + event.getNumberOfGuests() +
+                        " - Venue: " + event.getVenue() + " - Location: " + event.getLocation() + " - Phone: " + event.getPhone());
+
 
             }
         }
     }
     public void createWeddingEvent(String brideName, String groomName, String date, String time, int numberOfGuests, String venue, String location, String phone,String price) {
 	    Map<String, Integer> venueCapacities = new HashMap<>();
-	    venueCapacities.put(Venue_1, 100);
-	    venueCapacities.put(Venue_2, 150);
-	    venueCapacities.put(Venue_3, 200);
+	    venueCapacities.put(VENUE_1, 100);
+	    venueCapacities.put(VENUE_2, 150);
+	    venueCapacities.put(VENUE_3, 200);
 
 	    for (AddEvent event : events) {
 	        String eventVenue = event.getVenue();
@@ -819,7 +810,3 @@ public void Photo() {
     }
 }
 }
-
-
-
-
