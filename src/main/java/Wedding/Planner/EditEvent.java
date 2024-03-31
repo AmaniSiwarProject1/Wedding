@@ -1,6 +1,9 @@
 package Wedding.Planner;
+import java.util.logging.Logger;
 
 public class EditEvent {
+        private static final Logger logger = Logger.getLogger(EditEvent.class.getName());
+
     private String brideName;
     private String groomName;
     private String date;
