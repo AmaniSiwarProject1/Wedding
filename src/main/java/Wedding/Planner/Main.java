@@ -17,7 +17,7 @@ public class Main {
     private static final String EMAIL = "Enter your Email please";
     private static final String PASS = "Enter your password please";
     private static String userType = "none";
-public static ArrayList<Users> usersList = new ArrayList<>();
+public static final List<Users> USERS_LIST = new ArrayList<>();
     public static ArrayList<Admin> AdminList = new ArrayList<>();
     public static ArrayList<ServiceProvider> ServiceProviderList = new ArrayList<>();
     static Scanner input2 = new Scanner(System.in);
@@ -341,7 +341,7 @@ public static ArrayList<Users> usersList = new ArrayList<>();
     	}
     }
     public static String login(String email, String password) {
-        for (Users user : UsersList) {
+        for (Users user : USERS_LIST) {
             if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
                 setUserType("User");
                 return "User";
@@ -366,14 +366,14 @@ public static ArrayList<Users> usersList = new ArrayList<>();
     }
 
     public static boolean signUp(Users user) {
-        UsersList.add(user);
-        System.out.println("Done! You are now registered. Please log in.");
+        USERS_LIST.add(user);
+       logger.info("Done! You are now registered. Please log in.");
         return true;
     }
 
     public static void main(String[] args) {
         Users user1 = new Users("John Doe", "a@gmail.com", "password123");
-        UsersList.add(user1);
+      USERS_LIST.add(user1);
 
         Admin admin1 = new Admin("Jane Doe", "si@example.com", "password456");
         AdminList.add(admin1);
