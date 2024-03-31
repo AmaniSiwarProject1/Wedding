@@ -93,7 +93,7 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
             logger.info("List of Events:");
             for (int i = 0; i < events.size(); i++) {
                 AddEvent event = events.get(i);
-                logger.info((i + 1) + ". " + event.getBrideName() + AND" + event.getGroomName() +
+               System.out.println((i + 1) + ". " + event.getBrideName() + " and " + event.getGroomName() +
                         " - Date: " + event.getDate() + " - Time: " + event.getTime() + " - Number of Guests: " + event.getNumberOfGuests() +
                         " - Venue: " + event.getVenue() + " - Location: " + event.getLocation() + " - Phone: " + event.getPhone());
 
@@ -377,8 +377,7 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
         	logger.info("Matching venues:");
             for (int i = 0; i < matchingVenues.size(); i++) {
                 Venue venue = matchingVenues.get(i);
-                logger.info(String.format("Matching venues: %s; Price: $%.2f", venue.getName(), venue.getPrice()));
-            }
+System.out.println((i + 1) + ". " + venue.getName() + " - Price: $" + venue.getPrice());            }
 
             logger.info("Choose a venue (enter the number): ");
             int choice = scanner.nextInt();
