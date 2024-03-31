@@ -28,6 +28,8 @@ public class EventManagment {
 private static final String VENUE_1 = "Venue1";
     private static final String VENUE_2 = "Venue2";
     private static final String VENUE_3 = "Venue3";
+	    private static final String AND = " and "; 
+
     private List<AddEvent> events;
     private static Scanner input = new Scanner(System.in);
 private static final Logger logger = Logger.getLogger(EventManagment.class.getName());
@@ -91,7 +93,7 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
             logger.info("List of Events:");
             for (int i = 0; i < events.size(); i++) {
                 AddEvent event = events.get(i);
-                logger.info((i + 1) + ". " + event.getBrideName() + " and " + event.getGroomName() +
+                logger.info((i + 1) + ". " + event.getBrideName() + AND" + event.getGroomName() +
                         " - Date: " + event.getDate() + " - Time: " + event.getTime() + " - Number of Guests: " + event.getNumberOfGuests() +
                         " - Venue: " + event.getVenue() + " - Location: " + event.getLocation() + " - Phone: " + event.getPhone());
 
@@ -512,7 +514,7 @@ public void  calander2() {
     newEventsList.add(new AddEvent("Bride3", "Groom3", "2024-07-10", "02:00 PM", 200, VENUE_3, "Location3", "Phone3","4000"));
 
     for (AddEvent addEvent : newEventsList) {
-        Event1 event = new Event1(addEvent.getBrideName() + " and " + addEvent.getGroomName() + "'s Wedding", LocalDate.parse(addEvent.getDate()));
+        Event1 event = new Event1(addEvent.getBrideName() +AND + addEvent.getGroomName() + "'s Wedding", LocalDate.parse(addEvent.getDate()));
 
         Task bookVenueTask = new Task("Book venue at " + addEvent.getVenue(), LocalDate.parse(addEvent.getDate()));
         Task hireCatererTask = new Task("Hire caterer for the event", LocalDate.parse(addEvent.getDate()));
@@ -559,7 +561,7 @@ public void  calanderSuperProvider() {
     newEventsList.add(new AddEvent("Bride2", "Groom2", "2024-06-15", "11:30 AM", 150, VENUE_2, "Location2", "Phone2","2500"));
 
     for (AddEvent addEvent : newEventsList) {
-        Event1 event = new Event1(addEvent.getBrideName() + " and " + addEvent.getGroomName() + "'s Wedding", LocalDate.parse(addEvent.getDate()));
+        Event1 event = new Event1(addEvent.getBrideName() +AND + addEvent.getGroomName() + "'s Wedding", LocalDate.parse(addEvent.getDate()));
 
         Task BookFlower  = new Task("Book Flower " + addEvent.getVenue(), LocalDate.parse(addEvent.getDate()));
         Task Providefood = new Task("Provide food", LocalDate.parse(addEvent.getDate()));
