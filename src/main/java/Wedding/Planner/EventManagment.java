@@ -93,7 +93,7 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
             logger.info("List of Events:");
             for (int i = 0; i < events.size(); i++) {
                 AddEvent event = events.get(i);
-               System.out.println((i + 1) + ". " + event.getBrideName() + " and " + event.getGroomName() +
+               System.out.println((i + 1) + ". " + event.getBrideName() + AND + event.getGroomName() +
                         " - Date: " + event.getDate() + " - Time: " + event.getTime() + " - Number of Guests: " + event.getNumberOfGuests() +
                         " - Venue: " + event.getVenue() + " - Location: " + event.getLocation() + " - Phone: " + event.getPhone());
 
