@@ -21,7 +21,7 @@ public class Main {
     public static ArrayList<ServiceProvider> ServiceProviderList = new ArrayList<>();
     static Scanner input2 = new Scanner(System.in);
     public static EventManagment eventManager = new EventManagment();
-    private static final Logger logger = Logger.getLogger(EventManagment.class.getName());
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
 
     public static void setUserType(String type) {
         userType = type;
