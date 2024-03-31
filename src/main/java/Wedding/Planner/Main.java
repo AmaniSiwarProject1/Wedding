@@ -11,6 +11,7 @@ import Wedding.Planner.EventManagment.VenueEditor;
 
 public class Main {
     static List<AddEvent> newEventsList = new ArrayList<>();
+    private static final String SEPARATOR = "--------------------------------";
 
     static String EMAIL1;
     private static final String EMAIL = "Enter your Email please";
@@ -287,7 +288,7 @@ public class Main {
     	boolean running = true; // Variable to control the loop
 
     	while (running) {
-    	    logger.info("------------------------------------------------");
+        logger.info(SEPARATOR);
     	    logger.info("1. View Profile");
     	    logger.info("2. Edit Profile");
     	    logger.info("3. Add Event");
@@ -297,7 +298,7 @@ public class Main {
     	    logger.info("7. Calender");
     	    logger.info("8. Add Photo or Video:");
     	    logger.info("9. Log out");
-    	    logger.info("------------------------------------------------");
+        logger.info(SEPARATOR);
     	    Scanner scanner = new Scanner(System.in);
     	    int num = scanner.nextInt(); // corrected variable name
     	    scanner.nextLine();
@@ -388,11 +389,11 @@ public class Main {
 
         
 
-        logger.info("------------------------------------------------");
+        logger.info(SEPARATOR);
         logger.info("1. Sign Up");
         logger.info("2. Log in");
         logger.info("3. Exit the program");
-        logger.info("------------------------------------------------");
+        logger.info(SEPARATOR);
 
         int num = input2.nextInt();
         if (num == 1) {
