@@ -16,7 +16,7 @@ public class Main {
     private static final String EMAIL = "Enter your Email please";
     private static final String PASS = "Enter your password please";
     private static String userType = "none";
-protected ArrayList<Users> UsersList = new ArrayList<>();
+    private static List<User> UsersList = new ArrayList<>();
     public static ArrayList<Admin> AdminList = new ArrayList<>();
     public static ArrayList<ServiceProvider> ServiceProviderList = new ArrayList<>();
     static Scanner input2 = new Scanner(System.in);
