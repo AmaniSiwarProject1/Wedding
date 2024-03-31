@@ -96,6 +96,7 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
                 logger.info((i + 1) + " - " + event.getBrideName() + " AND " + event.getGroomName() + " - Date: " + event.getDate() + " - Time: " + event.getTime() + " - Number of Guests: " + event.getNumberOfGuests() + " - Venue: " + event.getVenue() + " - Location: " + event.getLocation() + " - Phone: " + event.getPhone());
 
 
+
             }
         }
     }
@@ -410,7 +411,7 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
 
 
         scanner.close();
-    
+        }
     }
   private static boolean isValidDateFormat(String date) {
       String regex = "\\d{4}-\\d{2}-\\d{2}";
