@@ -91,16 +91,17 @@ public class EditEvent {
     }
 
     public void displayEventDetails() {
-        if (logger.isLoggable(Level.INFO)) {
-            logger.info(String.format("Event Details:"));
-            logger.info(String.format("Bride Name: %s", brideName));
-            logger.info(String.format("Groom Name: %s", groomName));
-            logger.info(String.format("Date: %s", date));
-            logger.info(String.format("Time: %s", time));
-            logger.info(String.format("Number of Guests: %d", numberOfGuests));
-            logger.info(String.format("Venue: %s", venue));
-            logger.info(String.format("Location: %s", location));
-            logger.info(String.format("Phone: %s", phone));
-        }
+    	if (logger.isLoggable(Level.INFO)) {
+    	    logger.info("Event Details:");
+    	    logger.info(String.format("Bride Name: %s", brideName));
+    	    logger.info(String.format("Groom Name: %s", groomName));
+    	    logger.info(String.format("Date: %s", date));
+    	    logger.info(String.format("Time: %s", time));
+    	    logger.info(String.format("Number of Guests: %d", numberOfGuests));
+    	    logger.info(String.format("Venue: %s", venue));
+    	    logger.info(String.format("Location: %s", location));
+    	    logger.info(String.format("Phone: %s", phone));
+    	}
+
     }
 }
