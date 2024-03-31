@@ -87,10 +87,10 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
         if (events.isEmpty()) {
         	logger.info("No events to display.");
         } else {
-            System.out.println("List of Events:");
+            logger.info("List of Events:");
             for (int i = 0; i < events.size(); i++) {
                 AddEvent event = events.get(i);
-                System.out.println((i + 1) + ". " + event.getBrideName() + " and " + event.getGroomName() +
+               logger.info((i + 1) + ". " + event.getBrideName() + " and " + event.getGroomName() +
                         " - Date: " + event.getDate() + " - Time: " + event.getTime() + " - Number of Guests: " + event.getNumberOfGuests() +
                         " - Venue: " + event.getVenue() + " - Location: " + event.getLocation() + " - Phone: " + event.getPhone());
             }
@@ -166,7 +166,7 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
         if (events.isEmpty()) {
         	logger.info("No events to display.");
         } else {
-            System.out.println("List of Events:");
+            logger.info("List of Events:");
             for (int i = 0; i < events.size(); i++) {
                 AddEvent event = events.get(i);
                 logger.info("Event " + (i + 1) + ":");
