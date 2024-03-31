@@ -24,9 +24,9 @@ import java.nio.file.StandardCopyOption;
 public class EventManagment {
     private String errorMessage;
     private Map<String, Integer> venueCapacities; 
-private static final String Venue_1 = "Venue1";
-    private static final String Venue_2 = "Venue2";
-    private static final String Venue_3 = "Venue3";
+private static final String VENUE_1 = "Venue1";
+    private static final String VENUE_2 = "Venue2";
+    private static final String VENUE_3 = "Venue3";
     private List<AddEvent> events;
     private static Scanner input = new Scanner(System.in);
 private static final Logger logger = Logger.getLogger(EventManagment.class.getName());
@@ -37,9 +37,9 @@ private static final Logger logger = Logger.getLogger(EventManagment.class.getNa
         initializeVenueCapacities();
     }
     private void initializeVenueCapacities() {
-        venueCapacities.put(Venue_1, 100);
-        venueCapacities.put(Venue_2, 150);
-        venueCapacities.put(Venue_3, 200);
+        venueCapacities.put(VENUE_1, 100);
+        venueCapacities.put(VENUE_2, 150);
+        venueCapacities.put(VENUE_3, 200);
     }
     public String getErrorMessage() {
         return errorMessage;
@@ -504,9 +504,9 @@ public void  calander2() {
     WeddingPlanner planner = new WeddingPlanner();
 
     List<AddEvent> newEventsList = new ArrayList<>();
-    newEventsList.add(new AddEvent("Bride1", "Groom1", "2024-05-20", "10:00 AM", 100, Venue_1, "Location1", "Phone1","2500"));
-    newEventsList.add(new AddEvent("Bride2", "Groom2", "2024-06-15", "11:30 AM", 150, Venue_2, "Location2", "Phone2","2500"));
-    newEventsList.add(new AddEvent("Bride3", "Groom3", "2024-07-10", "02:00 PM", 200, Venue_3, "Location3", "Phone3","4000"));
+    newEventsList.add(new AddEvent("Bride1", "Groom1", "2024-05-20", "10:00 AM", 100, VENUE_1, "Location1", "Phone1","2500"));
+    newEventsList.add(new AddEvent("Bride2", "Groom2", "2024-06-15", "11:30 AM", 150, VENUE_2, "Location2", "Phone2","2500"));
+    newEventsList.add(new AddEvent("Bride3", "Groom3", "2024-07-10", "02:00 PM", 200, VENUE_3, "Location3", "Phone3","4000"));
 
     for (AddEvent addEvent : newEventsList) {
         Event1 event = new Event1(addEvent.getBrideName() + " and " + addEvent.getGroomName() + "'s Wedding", LocalDate.parse(addEvent.getDate()));
@@ -552,8 +552,8 @@ public void  calanderSuperProvider() {
     Scanner scanner = new Scanner(System.in);
 
     List<AddEvent> newEventsList = new ArrayList<>();
-    newEventsList.add(new AddEvent("Bride1", "Groom1", "2024-05-20", "10:00 AM", 100, Venue_1, "Location1", "Phone1","2500"));
-    newEventsList.add(new AddEvent("Bride2", "Groom2", "2024-06-15", "11:30 AM", 150, Venue_2, "Location2", "Phone2","2500"));
+    newEventsList.add(new AddEvent("Bride1", "Groom1", "2024-05-20", "10:00 AM", 100, VENUE_1, "Location1", "Phone1","2500"));
+    newEventsList.add(new AddEvent("Bride2", "Groom2", "2024-06-15", "11:30 AM", 150, VENUE_2, "Location2", "Phone2","2500"));
 
     for (AddEvent addEvent : newEventsList) {
         Event1 event = new Event1(addEvent.getBrideName() + " and " + addEvent.getGroomName() + "'s Wedding", LocalDate.parse(addEvent.getDate()));
