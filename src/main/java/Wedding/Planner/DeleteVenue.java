@@ -1,4 +1,4 @@
-package Wedding.Planner;
+package wedding.planner;
 
 public class DeleteVenue {
     private String name;
