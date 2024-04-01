@@ -6,8 +6,8 @@ import java.util.logging.Logger;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import Wedding.Planner.EventManagment;
-import Wedding.Planner.Main;
+import wedding.planner.EventManagment;
+import wedding.planner.Main;
 
 public class DeleteEvent {
 
