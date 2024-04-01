@@ -1,6 +1,6 @@
 import static org.junit.Assert.assertTrue;
 
-import Wedding.Planner.Main;
+import wedding.planner.Main;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
