@@ -6,8 +6,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
-import Wedding.Planner.EventManagment;
-import Wedding.Planner.AddEvent;
+import wedding.planner.EventManagment;
+import wedding.planner.AddEvent;
 
 public class UpdateEvent {
     private EventManagment eventManager = new EventManagment();
