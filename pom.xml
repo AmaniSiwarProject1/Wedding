@@ -62,6 +62,11 @@
                     <goals>
                         <goal>report</goal>
                     </goals>
+                  <configuration>
+  <excludes>
+    <exclude>**/Wedding/Planner/Main.java</exclude>
+  </excludes>
+</configuration>
                 </execution>
             </executions>
         </plugin>
