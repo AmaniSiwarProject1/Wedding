@@ -1,7 +1,7 @@
 import static org.junit.Assert.assertEquals;
 
-import Wedding.Planner.EventManagment;
-import Wedding.Planner.EventManagment.VenueEditor;
+import wedding.planner.EventManagment;
+import wedding.planner.EventManagment.VenueEditor;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
