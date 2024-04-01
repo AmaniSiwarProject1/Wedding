@@ -1,4 +1,4 @@
-package wedding.planner;
+package Wedding.Planner;
 
 public class ServiceProvider {
     private String fullName;
