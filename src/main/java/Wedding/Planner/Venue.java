@@ -1,4 +1,4 @@
-package Wedding.Planner;
+package wedding.planner;
 public class Venue {
     private String name;
     private double price;
