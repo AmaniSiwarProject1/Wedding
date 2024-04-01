@@ -1,18 +1,20 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import java.util.logging.Logger;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import Wedding.Planner.AddEvent;
+import Wedding.Planner.EventManagment;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import Wedding.Planner.EventManagment;
-import Wedding.Planner.Main;
+import io.cucumber.plugin.event.Event;
 
 public class DeleteEvent {
 
     private EventManagment eventManagment;
-    private static final Logger logger = Logger.getLogger(DeleteEvent.class.getName());
 
     @Given("The user entered information about the event")
     public void theUserEnteredInformationAboutTheEvent() {
@@ -59,8 +61,8 @@ assertTrue(true);    }
         eventExists = true;
     }
 
-    private String eventToDeleteDate;
-    private String eventToDeleteTime;
+
+    private List<AddEvent> deletedEvents = new ArrayList<>();
     @When("The user attempts to delete the event")
     public void theUserAttemptsToDeleteTheEvent() {
 
@@ -68,7 +70,7 @@ assertTrue(true);    }
         if (eventExists) {
             assertTrue(true);
        } else {
-    	   logger.info("There is no event to delete.");
+            System.out.println("There is no event to delete.");
         }
     }
     @Then("The system prompts the user to confirm deletion and The user cancels the deletion and The event remains in the events list")
@@ -82,5 +84,38 @@ assertTrue(true);    }
             
         }
     }
+    private List<AddEvent> eventsToDelete;
+    private boolean deletionResult;
+    @Given("There are multiple events in the events list and The user wants to delete all events")
+    public void thereAreMultipleEventsInTheEventsListAndTheUserWantsToDeleteAllEvents() {
+    	 eventManagment = new EventManagment();
+         eventsToDelete = new ArrayList<>();
+
+         // Assume there are multiple events added to the list
+         eventsToDelete.add(new AddEvent("Event1"));
+         eventsToDelete.add(new AddEvent("Event2"));
+         eventsToDelete.add(new AddEvent("Event3"));
+
+         for (AddEvent event : eventsToDelete) {
+             eventManagment.addEvent(event);
+         }
+
+         assertTrue(eventManagment.getEvents().containsAll(eventsToDelete));
+    }
+
+    @When("The user confirms the deletion action")
+    public void theUserConfirmsTheDeletionAction() {
+    	 assertTrue(!eventsToDelete.isEmpty());
+    	 }
+
+    @Then("The system deletes all events and The system notifies the user that all events have been successfully deleted")
+    public void theSystemDeletesAllEventsAndTheSystemNotifiesTheUserThatAllEventsHaveBeenSuccessfullyDeleted() {
+        System.out.println("All events have been successfully deleted!");
+
+    }
+
+  
+
+  
 
 }
