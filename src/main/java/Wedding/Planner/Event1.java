@@ -1,4 +1,4 @@
-package wedding.planner;
+package Wedding.Planner;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
