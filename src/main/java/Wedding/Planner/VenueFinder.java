@@ -1,4 +1,4 @@
-package Wedding.Planner;
+package wedding.planner;
 import java.util.ArrayList;
 import java.util.List;
 
