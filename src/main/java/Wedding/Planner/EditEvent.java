@@ -1,4 +1,4 @@
-package Wedding.Planner;
+package wedding.planner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
