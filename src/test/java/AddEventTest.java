@@ -1,5 +1,5 @@
-import Wedding.Planner.AddEvent;
-import Wedding.Planner.EventManagment;
+import wedding.planner.AddEvent;
+import wedding.planner.EventManagment;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
