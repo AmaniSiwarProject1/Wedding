@@ -1,7 +1,7 @@
 import static org.junit.Assert.assertTrue;
 
-import wedding.planner.Main;
-import wedding.planner.Users;
+import Wedding.Planner.Main;
+import Wedding.Planner.Users;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
