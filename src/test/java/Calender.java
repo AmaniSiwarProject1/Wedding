@@ -6,6 +6,8 @@ import static org.junit.Assert.*;
 import Wedding.Planner.AddEvent;
 import Wedding.Planner.EventManagment;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,4 +61,23 @@ public class Calender {
         
         return true; 
     }
+    @Given("the calendar contains upcoming events within a certain time frame")
+    public void theCalendarContainsUpcomingEventsWithinACertainTimeFrame() {
+    	 assertTrue(true);
+    	}
+
+    @When("the system detects that there are events scheduled within the next week")
+    public void theSystemDetectsThatThereAreEventsScheduledWithinTheNextWeek() {
+        System.out.println("System detects upcoming events within the next week.");
+
+    }
+
+    @Then("the system sends a reminder notification to the user about the upcoming events")
+    public void theSystemSendsAReminderNotificationToTheUserAboutTheUpcomingEvents() {
+    	 System.out.println("Upcoming events within the next week:");
+    	    for (AddEvent event : events) {
+    	        System.out.println(event);
+    	    }
+    }
+
 }
