@@ -13,6 +13,7 @@ import Wedding.Planner.EventManagment.VenueEditor;
 public class Main {
     static List<AddEvent> newEventsList = new ArrayList<>();
     private static final String SEPARATOR = "--------------------------------";
+    private static final String THANK_YOU_MESSAGE = "Thanks for visiting the program.";
 
     static String EMAIL1;
     private static final String EMAIL = "Enter your Email please";
@@ -161,7 +162,7 @@ public static final List<Users> USERS_LIST = new ArrayList<>();
 
                     case 10:
                       
-                    	logger.info("Thanks for visiting the program.");
+        logger.info(THANK_YOU_MESSAGE);
                         System.exit(0);
                         break;
                     default:
@@ -265,7 +266,7 @@ public static final List<Users> USERS_LIST = new ArrayList<>();
 
                 case 13:
                   
-                	logger.info("Thanks for visiting the program.");
+        logger.info(THANK_YOU_MESSAGE);
                     System.exit(0);
                     break;
                 default:
@@ -332,7 +333,7 @@ public static final List<Users> USERS_LIST = new ArrayList<>();
     	            eventManager.Photo();
     	            break;
     	        case 9:
-    	            logger.info("Thanks for visiting the program.");
+        logger.info(THANK_YOU_MESSAGE);
     	            running = false; // Set the variable to false to exit the loop
     	            break;
     	        default:
@@ -412,7 +413,7 @@ public static final List<Users> USERS_LIST = new ArrayList<>();
                 showMenuForNone();
             }
         } else if (num == 3) {
-        	logger.info("Thanks for visiting the program.");
+        logger.info(THANK_YOU_MESSAGE);
             System.exit(0);
         }
     }
