@@ -3,8 +3,8 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import static org.junit.Assert.*;
 
-import wedding.planner.AddEvent;
-import wedding.planner.EventManagment;
+import Wedding.Planner.AddEvent;
+import Wedding.Planner.EventManagment;
 
 import java.util.ArrayList;
 import java.util.List;
