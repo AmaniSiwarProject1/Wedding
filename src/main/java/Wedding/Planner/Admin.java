@@ -1,4 +1,4 @@
-package wedding.planner;
+package Wedding.Planner;
 
 public class Admin {
     private String fullName;
